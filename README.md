@@ -2,9 +2,9 @@
 # Примеры запросов из вебинара
 >from p_library.models import Book, Author
 
->from django.db import models 
+from django.db import models 
 
->from django.db.models import Count, Sum, F
+from django.db.models import Count, Sum, F>
 
 >Book.objects.all()   
 
