@@ -1,3 +1,5 @@
+Для запуска проекта выполните: 
+    python manage.py runserver
 
 # Примеры запросов из вебинара
 from p_library.models import Book, Author
