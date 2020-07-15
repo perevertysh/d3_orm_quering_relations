@@ -24,7 +24,7 @@ from django.db.models import ExpressionWrapper - импорт обертки д�
 
 books_price = books.annotate(all_price=(ExpressionWrapper(F("price")*F("copy_count"), output_field=""))) - аннотирование списка Книг общей стоимостью всех копий данной Книги
 
-books_price = books.annotate(all_price=(ExpressionWrapper(F("price")*F("copy_count"), output_field=DecimalField()))).aggregate(Sum("all_price")) - аггрегации общей стоимости всех копий всех Книг
+books_price = books.annotate(all_price=(ExpressionWrapper(F("price")*F("copy_count"), output_field=DecimalField()))).aggregate(Sum("all_price")) - аггрегация общей стоимости всех копий всех Книг
 
 books_price = Book.objects.filter(author__in=authors_list).annotate(all_price=(ExpressionWrapper(F("price")*F("copy_count"), output_field=DecimalField()))).aggregate(Sum("all_price")) - объединение всех предыдущих запросов
 
